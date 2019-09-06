@@ -39,19 +39,19 @@
   "sourceMap": "",
   "deployedSourceMap": "",
   "source": "pragma solidity ^0.5.0;\n\n/*\nBase class contracts willing to accept ERC223 token transfers must conform to.\n\nSender: msg.sender to the token contract, the address originating the token transfer.\n          - For user originated transfers sender will be equal to tx.origin\n          - For contract originated transfers, tx.origin will be the user that made the tx that produced the transfer.\nOrigin: the origin address from whose balance the tokens are sent\n          - For transfer(), origin = msg.sender\n          - For transferFrom() origin = _from to token contract\nValue is the amount of tokens sent\nData is arbitrary data sent with the token transfer. Simulates ether tx.data\n\nFrom, origin and value shouldn't be trusted unless the token contract is trusted.\nIf sender == tx.origin, it is safe to trust it regardless of the token.\n*/\n\ncontract IERC223Receiver {\n  function tokenFallback(address _sender, address _origin, uint _value, bytes memory _data) public returns (bool ok);\n}",
-  "sourcePath": "/Users/hadar/workspace/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
+  "sourcePath": "/Users/alexeykosinski/work/nordwhale/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
   "ast": {
-    "absolutePath": "/Users/hadar/workspace/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
+    "absolutePath": "/Users/alexeykosinski/work/nordwhale/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
     "exportedSymbols": {
       "IERC223Receiver": [
-        5779
+        5732
       ]
     },
-    "id": 5780,
+    "id": 5733,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5765,
+        "id": 5718,
         "literals": [
           "solidity",
           "^",
@@ -67,9 +67,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 5779,
+        "id": 5732,
         "linearizedBaseContracts": [
-          5779
+          5732
         ],
         "name": "IERC223Receiver",
         "nodeType": "ContractDefinition",
@@ -77,22 +77,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 5778,
+            "id": 5731,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5774,
+              "id": 5727,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5767,
+                  "id": 5720,
                   "name": "_sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "890:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -101,7 +101,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5766,
+                    "id": 5719,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "890:7:21",
@@ -116,10 +116,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5769,
+                  "id": 5722,
                   "name": "_origin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "907:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -128,7 +128,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5768,
+                    "id": 5721,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "907:7:21",
@@ -143,10 +143,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5771,
+                  "id": 5724,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "924:11:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -155,7 +155,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5770,
+                    "id": 5723,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "924:4:21",
@@ -169,10 +169,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5773,
+                  "id": 5726,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "937:18:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -181,7 +181,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 5772,
+                    "id": 5725,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "937:5:21",
@@ -197,15 +197,15 @@
               "src": "889:67:21"
             },
             "returnParameters": {
-              "id": 5777,
+              "id": 5730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5776,
+                  "id": 5729,
                   "name": "ok",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "973:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -214,7 +214,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 5775,
+                    "id": 5728,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "973:4:21",
@@ -229,31 +229,31 @@
               ],
               "src": "972:9:21"
             },
-            "scope": 5779,
+            "scope": 5732,
             "src": "867:115:21",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 5780,
+        "scope": 5733,
         "src": "838:146:21"
       }
     ],
     "src": "0:984:21"
   },
   "legacyAST": {
-    "absolutePath": "/Users/hadar/workspace/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
+    "absolutePath": "/Users/alexeykosinski/work/nordwhale/GoodDollar/GoodBootstrap/packages/contracts/contracts/token/IERC223Receiver.sol",
     "exportedSymbols": {
       "IERC223Receiver": [
-        5779
+        5732
       ]
     },
-    "id": 5780,
+    "id": 5733,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 5765,
+        "id": 5718,
         "literals": [
           "solidity",
           "^",
@@ -269,9 +269,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 5779,
+        "id": 5732,
         "linearizedBaseContracts": [
-          5779
+          5732
         ],
         "name": "IERC223Receiver",
         "nodeType": "ContractDefinition",
@@ -279,22 +279,22 @@
           {
             "body": null,
             "documentation": null,
-            "id": 5778,
+            "id": 5731,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "tokenFallback",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 5774,
+              "id": 5727,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5767,
+                  "id": 5720,
                   "name": "_sender",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "890:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -303,7 +303,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5766,
+                    "id": 5719,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "890:7:21",
@@ -318,10 +318,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5769,
+                  "id": 5722,
                   "name": "_origin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "907:15:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -330,7 +330,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 5768,
+                    "id": 5721,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "907:7:21",
@@ -345,10 +345,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5771,
+                  "id": 5724,
                   "name": "_value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "924:11:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -357,7 +357,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 5770,
+                    "id": 5723,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
                     "src": "924:4:21",
@@ -371,10 +371,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 5773,
+                  "id": 5726,
                   "name": "_data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "937:18:21",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -383,7 +383,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 5772,
+                    "id": 5725,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "937:5:21",
@@ -399,15 +399,15 @@
               "src": "889:67:21"
             },
             "returnParameters": {
-              "id": 5777,
+              "id": 5730,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 5776,
+                  "id": 5729,
                   "name": "ok",
                   "nodeType": "VariableDeclaration",
-                  "scope": 5778,
+                  "scope": 5731,
                   "src": "973:7:21",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -416,7 +416,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 5775,
+                    "id": 5728,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "973:4:21",
@@ -431,14 +431,14 @@
               ],
               "src": "972:9:21"
             },
-            "scope": 5779,
+            "scope": 5732,
             "src": "867:115:21",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 5780,
+        "scope": 5733,
         "src": "838:146:21"
       }
     ],
@@ -449,8 +449,8 @@
     "version": "0.5.2+commit.1df8f40c.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.10",
-  "updatedAt": "2019-08-13T12:38:30.411Z",
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-09-06T08:25:33.957Z",
   "devdoc": {
     "methods": {}
   },
