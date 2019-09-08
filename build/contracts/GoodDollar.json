@@ -9779,7 +9779,7 @@
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-09-06T08:35:41.032Z",
+  "updatedAt": "2019-09-08T12:31:30.012Z",
   "devdoc": {
     "methods": {
       "allowance(address,address)": {
